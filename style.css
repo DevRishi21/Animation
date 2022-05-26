@@ -1,0 +1,21 @@
+#back
+{
+    background-image: url(back-img.jpg);
+    width: auto;
+    height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#road
+{
+    background-image: url(road.jpg);
+}
+#car
+{
+    width: 150px;
+}
+#btn
+{
+    display: flex;
+    justify-content: center;
+}

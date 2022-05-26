@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Car Anime</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="back">
+            
+            <div id="btn">
+            <button onclick="start()" id="btn1" class="btn btn-warning"><b>start</b></button>
+            <button onclick="stop()" id="btn2" class="btn btn-danger"><b>stop</b></button>
+            <button onclick="reverse()" class="btn btn-success"><b>Rev</b></button>
+            </div>
+        </div>
+        
+        
+        <div id="road">
+            <img src="car.png" id="car">
+            </div>
+    </body>
+    <script>
+        var m=0;
+        var ID;
+        function start()
+        {
+            ID=setInterval(run,20);
+        }
+        
+        function run()
+        {
+            if(m==1370)
+                {
+                    clearInterval(m);
+                    m=0;
+                }
+            else
+                {
+                    m+=5;
+                    var x=document.getElementById("car");
+                    x.style.marginLeft= m +"px";
+                }
+        }
+        function reverse()
+        {
+            ID=setInterval(rev,10);        
+        }
+        function rev()
+        {   
+            m-=5;
+            var x=document.getElementById("car");
+            x.style.marginLeft=m+ "px";
+        }
+        
+        function stop()
+        {
+            clearInterval(ID);
+        }
+        
+    </script>
+</html>
